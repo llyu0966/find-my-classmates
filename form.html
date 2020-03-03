@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<body style = "background-color:lightblue;">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}  
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  Margin-left:30px;
+  Margin-right:30px;
+  border: 1px solid #4CAF50;
+}
+
+h1{
+  Color:Grey;
+  font-style: oblique;
+  Font-family:Helvetical,Georgia, serif;
+  }
+
+h2{
+  Color:grey;
+  Font-style:italic;
+  }
+
+h3{
+  Color:grey;
+  Font-style:normal;
+  letter-spacing: 3px;
+  }
+
+p{
+  Font-family: Times, serif;
+  }
+
+
+/* Style the header */
+.header {
+  background-color:white ;
+  padding: 30px;
+  text-align: center;
+  Margin-top: 10px;
+  Margin-right: 30px;
+  Margin-left: 30px;
+  border-radius: 10px;
+  Border: 1px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: grey;
+  Border: 1px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  Font-size:125%;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style a form */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.submit {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  Margin-right: 5px;
+  Margin-left: 5px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left and right column */
+.rightcolumn {
+  width: 30%;
+  Float:left;
+  Background-color:white;
+  Border: 1px;
+  Padding: 25px;
+  display: table-cell;
+ }
+
+.leftcolumn {
+  width: 65%;
+  Float: left;
+  display: table-cell;
+  Background-color:white;
+  Margin-left: 30px;
+  Border: 1px;
+  Padding: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  Display:table;
+  content: "";
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+  }
+}
+
+/* Make the columns match the height of the tallest column */
+.col-container {
+  display: flex;
+  width: 100%;
+}
+.col {
+  flex: 1;
+  padding: 25px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  Margin-left: 30px;
+  Margin-right: 30px;
+  Margin-bottom: 10px;
+  Border: 1px;
+}
+
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  display: block;
+  Margin-top: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+</style>
+
+
+
+<title>Find MyClassmates</title>
+</head>
+
+<div class="header">
+<p>* Class:CISC 3650 * Section: TR11 * Name: Liyu Lin *</p>
+<h1>FIND MyClassmate</h1>
+</div>
+
+<div class="sticky">
+<div class="topnav">
+  <a href="main.html">Home</a>
+  <a href="form.html">Search</a>
+  <a href="contact.html">Contact</a>
+</div>
+</div>
+
+
+<div class="row">
+  
+  <div class="col-container">
+  <div class="leftcolumn">
+    <div style="background-color:white">
+   <h3>Search Your Classmate...</h3>
+    <div class = "submit">
+  <form action="/action_page.php">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    <label for="school">Search Target:</label>
+    <select id="school" name="school">
+      <option value="middleS">Middle School</option>
+      <option value="highS">High School</option>
+      <option value="college">College</option>
+    </select>
+   
+    <label for="schoolN">School Name:</label>
+    <input type="text" id="schoolN" name="schoolname" placeholder="School name..">
+
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class" placeholder="class(i.e. Math)..">
+
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year" placeholder="What year you took the course..">
+
+    <input type="submit" value="Search">
+
+  </form>
+ </div>
+
+    </div>
+</div>
+
+<div class="rightcolumn">
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+
+  <div class="img">
+ <a href="contact.html">
+ <img src="07_Box-1.png" alt="Suggestion Box" width="100" height="100">
+ <img src="123.jpg" alt="what do you think" width="200" height="100">
+ </a>
+ </div>
+</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© copyright FindMyClassmate.com</p>
+</div>
+
+
+</body>
+</html>
