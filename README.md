@@ -1,6 +1,5 @@
 # llyu0966.github.io
-Website Project for CISC.3650 - Human-Computer Interaction at Brooklyn College. Try not to use this code to cheat on any assignments (though I doubt any assignment will be similar to this).
-
+Website Project for CISC.3650 - Human-Computer Interaction at Brooklyn College. 
 The website (when live) can be found at https://llyu0966.github.io/main.html
 
 Description:
